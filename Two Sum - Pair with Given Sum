@@ -1,0 +1,18 @@
+class Solution {
+    boolean twoSum(int arr[], int target) {
+        int l = 0;
+        int r = arr.length - 1;
+        // boolean i = true;
+        Arrays.sort(arr);
+        while(l < r){
+            if(arr[l] + arr[r] == target){
+                return true;
+            }else if(arr[l] + arr[r] > target){
+                r--;
+            }else{
+                l++;
+            }
+        }
+        return false;
+    }
+}
